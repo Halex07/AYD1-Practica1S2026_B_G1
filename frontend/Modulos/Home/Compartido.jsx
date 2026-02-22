@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Share2, Inbox, Send, User, X } from 'lucide-react';
 
-function Shared({ receivedNotes, mySharedNotes }) {
+function Compartido({ receivedNotes, mySharedNotes }) {
   const [activeTab, setActiveTab] = useState('received');
 
   const formatDate = (dateString) => {
@@ -40,9 +40,9 @@ function Shared({ receivedNotes, mySharedNotes }) {
             Recibidas ({receivedNotes.length})
           </button>
           <button
-            onClick={() => setActiveTab('shared')}
+            onClick={() => setActiveTab('compartido')}
             className={`px-8 py-3 font-semibold rounded-xl transition-all duration-300 shadow-lg flex items-center gap-2 ${
-              activeTab === 'shared'
+              activeTab === 'compartido'
                 ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white scale-105'
                 : 'bg-white/30 backdrop-blur-md text-white hover:bg-white/40'
             }`}
@@ -101,7 +101,7 @@ function Shared({ receivedNotes, mySharedNotes }) {
             </div>
           )}
 
-          {activeTab === 'shared' && (
+          {activeTab === 'compartido' && (
             <div>
               {mySharedNotes.length === 0 ? (
                 <div className="text-center py-20">
@@ -162,4 +162,4 @@ function Shared({ receivedNotes, mySharedNotes }) {
   );
 }
 
-export default Shared;
+export default Compartido;
