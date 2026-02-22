@@ -2,7 +2,7 @@
 function Home(){
     return(
         <div>
-            PAGINA PRINCIPAL
+            Aqui va el componente del dashboard
         </div>
     );   
 }
