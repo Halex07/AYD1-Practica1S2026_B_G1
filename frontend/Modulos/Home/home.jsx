@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import NotesHome from './NotesHome';
+import InicioNotas from './InicioNotas';
 import Archivo from './Archivo';
-import Shared from './Shared';
+import Compartido from './Compartido';
 import Perfil from './Perfil';
 
 function Home() {
@@ -43,7 +43,7 @@ function Home() {
   // Usuario de ejemplo
   const user = {
     nombre: "Usuario Demo",
-    email: "demo@notecraft.com"
+    email: "demo@gmail.com"
   };
 
   const handleLogout = () => {
@@ -71,20 +71,20 @@ function Home() {
             <Route 
               path="/" 
               element={
-                <NotesHome 
+                <InicioNotas
                   notes={notes}
                   tags={tags}
                 />
               } 
             />
             <Route 
-              path="/archivado" 
+              path="/archivo" 
               element={<Archivo notes={archivedNotes} />} 
             />
             <Route 
-              path="/shared" 
+              path="/compartido" 
               element={
-                <Shared 
+                <Compartido 
                   receivedNotes={sharedNotes}
                   mySharedNotes={mySharedNotes}
                 />

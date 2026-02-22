@@ -21,19 +21,19 @@ function Sidebar({ isOpen }) {
           <span className="text-base">Inicio</span>
         </NavLink>
 
-        <NavLink to="/home/archivado" className={linkClass}>
-          <Archive size={20} />
-          <span className="text-base">Archivados</span>
-        </NavLink>
+      <NavLink to="/home/archivo" className={linkClass}>
+        <Archive size={20} />
+        <span className="text-base">Archivados</span>
+      </NavLink>
 
-        <NavLink to="/home/shared" className={linkClass}>
-          <Share2 size={20} />
-          <span className="text-base">Compartidos</span>
-        </NavLink>
+      <NavLink to="/home/compartido" className={linkClass}>
+        <Share2 size={20} />
+        <span className="text-base">Compartidos</span>
+      </NavLink>
 
         <div className="my-4 mx-6 border-t border-gray-200"></div>
 
-        <NavLink to="/home/profile" className={linkClass}>
+        <NavLink to="/home/perfil" className={linkClass}>
           <Settings size={20} />
           <span className="text-base">Perfil</span>
         </NavLink>
