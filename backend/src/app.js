@@ -9,11 +9,11 @@ dotenv.config();
 
 const app = express();
 
-//  ESTO ES LO QUE FALTABA O ESTÁ MAL POSICIONADO
+
 app.use(cors());
 app.use(express.json()); 
 
-//  Las rutas deben ir DESPUÉS
+//  Las rutas 
 app.use('/api/auth', authRoutes);
 app.use('/api/notes', notesRoutes);
 
